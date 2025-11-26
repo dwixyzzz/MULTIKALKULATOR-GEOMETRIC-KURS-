@@ -69,7 +69,7 @@ with tab_geo:
 
     # --- Lingkaran ---
     if pilihan_bentuk == "Lingkaran (2D)":
-        st.subheader("⚪ Perhitungan Lingkaran")
+        st.subheader("Perhitungan Lingkaran")
         radius = st.slider("Masukkan Jari-jari (r):", min_value=0.1, max_value=20.0, value=5.0, step=0.1)
         st.info(f"Rumus yang digunakan: Luas = $\\pi r^2$, Keliling = $2 \\pi r$")
 
@@ -81,7 +81,7 @@ with tab_geo:
 
     # --- Kubus ---
     elif pilihan_bentuk == "Kubus (3D)":
-        st.subheader("⬛ Perhitungan Kubus")
+        st.subheader("Perhitungan Kubus")
         sisi = st.slider("Masukkan Panjang Sisi (s):", min_value=0.1, max_value=10.0, value=3.0, step=0.1)
         st.info(f"Rumus yang digunakan: Volume = $s^3$, Luas Permukaan = $6 s^2$")
         
@@ -93,7 +93,7 @@ with tab_geo:
 
     # --- Silinder ---
     elif pilihan_bentuk == "Silinder (3D)":
-        st.subheader(" цилинд Perhitungan Silinder")
+        st.subheader("Perhitungan Silinder")
         col_r, col_t = st.columns(2)
         radius = col_r.slider("Masukkan Jari-jari Alas (r):", min_value=0.1, max_value=10.0, value=3.0, step=0.1)
         tinggi = col_t.slider("Masukkan Tinggi (t):", min_value=0.1, max_value=20.0, value=10.0, step=0.1)
@@ -142,7 +142,7 @@ with tab_kurs:
             )
             
     st.markdown("---")
-    st.subheader("Tabel Kurs Simulas")
+    st.subheader("Tabel Kurs Simulasi")
     
     # Tampilkan tabel kurs simulasi
     df_kurs = pd.DataFrame(
@@ -150,3 +150,4 @@ with tab_kurs:
         columns=["Mata Uang", "Kurs (Rp per 1 Valas)"]
     )
     st.dataframe(df_kurs.set_index("Mata Uang"), use_container_width=True)
+
